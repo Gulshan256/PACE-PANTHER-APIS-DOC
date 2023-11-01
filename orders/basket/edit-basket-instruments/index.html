@@ -340,16 +340,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../funds/" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../../funds/fetch-funds-v1/" class="md-tabs__link">
+          
   
   Funds
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -1215,6 +1216,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example Code
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1824,16 +1832,83 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../funds/" class="md-nav__link">
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     Funds
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Funds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funds/fetch-funds-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V1
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../funds/fetch-funds-v2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1895,6 +1970,13 @@
         <li class="md-nav__item">
   <a href="#error-response" class="md-nav__link">
     Error Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    Example Code
   </a>
   
 </li>
@@ -2211,6 +2293,775 @@
 <span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="example-code">Example Code</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:18"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><input id="__tabbed_1_14" name="__tabbed_1" type="radio" /><input id="__tabbed_1_15" name="__tabbed_1" type="radio" /><input id="__tabbed_1_16" name="__tabbed_1" type="radio" /><input id="__tabbed_1_17" name="__tabbed_1" type="radio" /><input id="__tabbed_1_18" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">python - http.client</label><label for="__tabbed_1_2">JavaScript</label><label for="__tabbed_1_3">C#</label><label for="__tabbed_1_4">cURL</label><label for="__tabbed_1_5">Dart</label><label for="__tabbed_1_6">Go-Native</label><label for="__tabbed_1_7">HTTP</label><label for="__tabbed_1_8">Java-OkHttp</label><label for="__tabbed_1_9">C - Libcurl</label><label for="__tabbed_1_10">node.js - Native</label><label for="__tabbed_1_11">Objective-C - NSURLSession</label><label for="__tabbed_1_12">ocaml-Cohttp</label><label for="__tabbed_1_13">PHP - cURL</label><label for="__tabbed_1_14">Powershell-RestMethod</label><label for="__tabbed_1_15">R-httr</label><label for="__tabbed_1_16">Ruby - Net::HTTP</label><label for="__tabbed_1_17">Shell - httpie</label><label for="__tabbed_1_18">Swift-URLSession</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># you an use any other module as well such as requests, urllib, etc.,</span>
+
+<span class="kn">import</span> <span class="nn">http.client</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;pacetrader.pacefin.in&quot;</span><span class="p">)</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+<span class="s2">&quot;basket_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;BasketId&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;BasketName&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;order_info&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;instrument_token&quot;</span><span class="p">:</span> <span class="mi">3045</span><span class="p">,</span>
+    <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_type&quot;</span><span class="p">:</span> <span class="s2">&quot;LIMIT&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">506.5</span><span class="p">,</span>
+    <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;disclosed_quantity&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;validity&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;product&quot;</span><span class="p">:</span> <span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;trading_symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;SBIN-EQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_side&quot;</span><span class="p">:</span> <span class="s2">&quot;BUY&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user_order_id&quot;</span><span class="p">:</span> <span class="mi">10002</span><span class="p">,</span>
+    <span class="s2">&quot;underlying_token&quot;</span><span class="p">:</span> <span class="s2">&quot;3045&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;series&quot;</span><span class="p">:</span> <span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;oms_order_id&quot;</span><span class="p">:</span> <span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;exchange_order_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;trigger_price&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;stop_loss_value&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;square_off_value&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;trailing_stop_loss&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;is_trailing&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;execution_type&quot;</span><span class="p">:</span> <span class="s2">&quot;BO&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;order_id&quot;</span><span class="p">:</span> <span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="p">})</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;x-device-type&#39;</span><span class="p">:</span> <span class="s1">&#39;WEB&#39;</span><span class="p">,</span>
+<span class="s1">&#39;x-authorization-token&#39;</span><span class="p">:</span> <span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="p">,</span>
+<span class="s1">&#39;content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="s2">&quot;/api/v1/basket/order&quot;</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// You can also use other methods such as `axios`,`jQuery`, `XHR`, etc..</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myHeaders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Headers</span><span class="p">();</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;x-device-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;WEB&quot;</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;x-authorization-token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">);</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;content-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">raw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="s2">&quot;basket_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketId&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketName&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;order_info&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;exchange&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instrument_token&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">3045</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;client_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;LIMIT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;price&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">506.5</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;disclosed_quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;validity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;product&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trading_symbol&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;SBIN-EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_side&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;BUY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;user_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">10002</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;underlying_token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3045&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;series&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;oms_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;exchange_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trigger_price&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;stop_loss_value&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;square_off_value&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trailing_stop_loss&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;is_trailing&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;execution_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;BO&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="p">});</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">requestOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+<span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">myHeaders</span><span class="p">,</span>
+<span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nx">raw</span><span class="p">,</span>
+<span class="nx">redirect</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;follow&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">requestOptions</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// You can also use other libraries such as RestSharp, etc..</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">();</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Put</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;x-device-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;WEB&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;x-authorization-token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;content-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringContent</span><span class="p">(</span><span class="s">&quot; {\r\n    \&quot;basket_id\&quot;:\&quot;&lt;BasketId&gt;\&quot;,\r\n    \&quot;name\&quot;:\&quot;&lt;BasketName&gt;\&quot;,\r\n    \&quot;order_info\&quot;:\r\n {\r\n      \&quot;exchange\&quot;:\&quot;NSE\&quot;,\r\n      \&quot;instrument_token\&quot;:3045,\r\n      \&quot;client_id\&quot;:\&quot;&lt;ClientId&gt;\&quot;,\r\n      \&quot;order_type\&quot;:\&quot;LIMIT\&quot;,\r\n      \&quot;price\&quot;:506.5,\r\n      \&quot;quantity\&quot;:1,\r\n      \&quot;disclosed_quantity\&quot;:0,\r\n      \&quot;validity\&quot;:\&quot;DAY\&quot;,\r\n      \&quot;product\&quot;:\&quot;MIS\&quot;,\r\n      \&quot;trading_symbol\&quot;:\&quot;SBIN-EQ\&quot;,\r\n      \&quot;order_side\&quot;:\&quot;BUY\&quot;,\r\n      \&quot;user_order_id\&quot;:10002,\r\n      \&quot;underlying_token\&quot;:\&quot;3045\&quot;,\r\n      \&quot;series\&quot;:\&quot;EQ\&quot;,\r\n      \&quot;oms_order_id\&quot;:\&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74\&quot;,\r\n      \&quot;exchange_order_id\&quot;:\&quot;\&quot;,\r\n      \&quot;trigger_price\&quot;:0,\r\n      \&quot;stop_loss_value\&quot;:0,\r\n      \&quot;square_off_value\&quot;:0,\r\n      \&quot;trailing_stop_loss\&quot;:0,\r\n      \&quot;is_trailing\&quot;:false,\r\n      \&quot;execution_type\&quot;:\&quot;BO\&quot;\r\n },\r\n  \&quot;order_id\&quot;:\&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74\&quot;\r\n}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+<span class="n">request</span><span class="p">.</span><span class="n">Content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">content</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<span class="n">response</span><span class="p">.</span><span class="n">EnsureSuccessStatusCode</span><span class="p">();</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">await</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">());</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>PUT<span class="w"> </span><span class="s1">&#39;https://pacetrader.pacefin.in/api/v1/basket/order&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;x-device-type: WEB&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;x-authorization-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;content-type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--data<span class="w"> </span><span class="s1">&#39; {</span>
+<span class="s1">    &quot;basket_id&quot;:&quot;&lt;BasketId&gt;&quot;,</span>
+<span class="s1">    &quot;name&quot;:&quot;&lt;BasketName&gt;&quot;,</span>
+<span class="s1">    &quot;order_info&quot;:</span>
+<span class="s1">{</span>
+<span class="s1">    &quot;exchange&quot;:&quot;NSE&quot;,</span>
+<span class="s1">    &quot;instrument_token&quot;:3045,</span>
+<span class="s1">    &quot;client_id&quot;:&quot;&lt;ClientId&gt;&quot;,</span>
+<span class="s1">    &quot;order_type&quot;:&quot;LIMIT&quot;,</span>
+<span class="s1">    &quot;price&quot;:506.5,</span>
+<span class="s1">    &quot;quantity&quot;:1,</span>
+<span class="s1">    &quot;disclosed_quantity&quot;:0,</span>
+<span class="s1">    &quot;validity&quot;:&quot;DAY&quot;,</span>
+<span class="s1">    &quot;product&quot;:&quot;MIS&quot;,</span>
+<span class="s1">    &quot;trading_symbol&quot;:&quot;SBIN-EQ&quot;,</span>
+<span class="s1">    &quot;order_side&quot;:&quot;BUY&quot;,</span>
+<span class="s1">    &quot;user_order_id&quot;:10002,</span>
+<span class="s1">    &quot;underlying_token&quot;:&quot;3045&quot;,</span>
+<span class="s1">    &quot;series&quot;:&quot;EQ&quot;,</span>
+<span class="s1">    &quot;oms_order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;,</span>
+<span class="s1">    &quot;exchange_order_id&quot;:&quot;&quot;,</span>
+<span class="s1">    &quot;trigger_price&quot;:0,</span>
+<span class="s1">    &quot;stop_loss_value&quot;:0,</span>
+<span class="s1">    &quot;square_off_value&quot;:0,</span>
+<span class="s1">    &quot;trailing_stop_loss&quot;:0,</span>
+<span class="s1">    &quot;is_trailing&quot;:false,</span>
+<span class="s1">    &quot;execution_type&quot;:&quot;BO&quot;</span>
+<span class="s1">},</span>
+<span class="s1">&quot;order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="s1">}&#39;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="s1">&#39;x-device-type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;WEB&#39;</span><span class="p">,</span>
+<span class="s1">&#39;x-authorization-token&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="p">,</span>
+<span class="s1">&#39;content-type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">};</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Uri</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;https://pacetrader.pacefin.in/api/v1/basket/order&#39;</span><span class="p">));</span>
+<span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">encode</span><span class="p">({</span>
+<span class="s2">&quot;basket_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketId&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketName&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;order_info&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;exchange&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instrument_token&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">3045</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;client_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;LIMIT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;price&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">506.5</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;disclosed_quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;validity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;product&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trading_symbol&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;SBIN-EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_side&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;BUY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;user_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">10002</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;underlying_token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3045&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;series&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;oms_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;exchange_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trigger_price&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;stop_loss_value&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;square_off_value&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trailing_stop_loss&quot;</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;is_trailing&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;execution_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;BO&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="p">});</span>
+<span class="n">request</span><span class="p">.</span><span class="n">headers</span><span class="p">.</span><span class="n">addAll</span><span class="p">(</span><span class="n">headers</span><span class="p">);</span>
+
+<span class="n">http</span><span class="p">.</span><span class="n">StreamedResponse</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="n">send</span><span class="p">();</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">statusCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">print</span><span class="p">(</span><span class="kd">await</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">stream</span><span class="p">.</span><span class="n">bytesToString</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="n">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">reasonPhrase</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="s">&quot;fmt&quot;</span>
+<span class="s">&quot;strings&quot;</span>
+<span class="s">&quot;net/http&quot;</span>
+<span class="s">&quot;io/ioutil&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="nx">url</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span>
+<span class="nx">method</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;PUT&quot;</span>
+
+<span class="nx">payload</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">strings</span><span class="p">.</span><span class="nx">NewReader</span><span class="p">(</span><span class="s">` {`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;basket_id&quot;:&quot;&lt;BasketId&gt;&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;name&quot;:&quot;&lt;BasketName&gt;&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;order_info&quot;:`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">{`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;exchange&quot;:&quot;NSE&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;instrument_token&quot;:3045,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;client_id&quot;:&quot;&lt;ClientId&gt;&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;order_type&quot;:&quot;LIMIT&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;price&quot;:506.5,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;quantity&quot;:1,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;disclosed_quantity&quot;:0,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;validity&quot;:&quot;DAY&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;product&quot;:&quot;MIS&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;trading_symbol&quot;:&quot;SBIN-EQ&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;order_side&quot;:&quot;BUY&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;user_order_id&quot;:10002,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;underlying_token&quot;:&quot;3045&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;series&quot;:&quot;EQ&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;oms_order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;exchange_order_id&quot;:&quot;&quot;,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;trigger_price&quot;:0,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;stop_loss_value&quot;:0,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;square_off_value&quot;:0,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;trailing_stop_loss&quot;:0,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;is_trailing&quot;:false,`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">    &quot;execution_type&quot;:&quot;BO&quot;`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">},`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">&quot;order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;`</span><span class="o">+</span><span class="s">&quot;</span>
+<span class="s">&quot;</span><span class="o">+</span><span class="s">`</span>
+<span class="s">}`</span><span class="p">)</span>
+
+<span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">payload</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span>
+<span class="p">}</span>
+<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;x-device-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;WEB&quot;</span><span class="p">)</span>
+<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;x-authorization-token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">)</span>
+<span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="s">&quot;content-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+
+<span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span>
+<span class="p">}</span>
+<span class="k">defer</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+
+<span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span>
+<span class="p">}</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">body</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">PUT</span> <span class="nn">/api/v1/basket/order</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">pacetrader.pacefin.in</span>
+<span class="na">x-device-type</span><span class="o">:</span> <span class="l">WEB</span>
+<span class="na">x-authorization-token</span><span class="o">:</span> <span class="l">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg</span>
+<span class="na">content-type</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">799</span>
+
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;basket_id&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;BasketId&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;BasketName&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;order_info&quot;</span><span class="p">:</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;exchange&quot;</span><span class="p">:</span><span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;instrument_token&quot;</span><span class="p">:</span><span class="mi">3045</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;order_type&quot;</span><span class="p">:</span><span class="s2">&quot;LIMIT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="mf">506.5</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;quantity&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;disclosed_quantity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;validity&quot;</span><span class="p">:</span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;product&quot;</span><span class="p">:</span><span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;trading_symbol&quot;</span><span class="p">:</span><span class="s2">&quot;SBIN-EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;order_side&quot;</span><span class="p">:</span><span class="s2">&quot;BUY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user_order_id&quot;</span><span class="p">:</span><span class="mi">10002</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;underlying_token&quot;</span><span class="p">:</span><span class="s2">&quot;3045&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;series&quot;</span><span class="p">:</span><span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;oms_order_id&quot;</span><span class="p">:</span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;exchange_order_id&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;trigger_price&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;stop_loss_value&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;square_off_value&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;trailing_stop_loss&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;is_trailing&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;execution_type&quot;</span><span class="p">:</span><span class="s2">&quot;BO&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;order_id&quot;</span><span class="p">:</span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// You can also use other libraries such as Unirest, etc..</span>
+
+<span class="n">OkHttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OkHttpClient</span><span class="p">().</span><span class="na">newBuilder</span><span class="p">()</span>
+<span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="n">MediaType</span><span class="w"> </span><span class="n">mediaType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MediaType</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+<span class="n">RequestBody</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestBody</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">mediaType</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; {\r\n    \&quot;basket_id\&quot;:\&quot;&lt;BasketId&gt;\&quot;,\r\n    \&quot;name\&quot;:\&quot;&lt;BasketName&gt;\&quot;,\r\n    \&quot;order_info\&quot;:\r\n {\r\n      \&quot;exchange\&quot;:\&quot;NSE\&quot;,\r\n      \&quot;instrument_token\&quot;:3045,\r\n      \&quot;client_id\&quot;:\&quot;&lt;ClientId&gt;\&quot;,\r\n      \&quot;order_type\&quot;:\&quot;LIMIT\&quot;,\r\n      \&quot;price\&quot;:506.5,\r\n      \&quot;quantity\&quot;:1,\r\n      \&quot;disclosed_quantity\&quot;:0,\r\n      \&quot;validity\&quot;:\&quot;DAY\&quot;,\r\n      \&quot;product\&quot;:\&quot;MIS\&quot;,\r\n      \&quot;trading_symbol\&quot;:\&quot;SBIN-EQ\&quot;,\r\n      \&quot;order_side\&quot;:\&quot;BUY\&quot;,\r\n      \&quot;user_order_id\&quot;:10002,\r\n      \&quot;underlying_token\&quot;:\&quot;3045\&quot;,\r\n      \&quot;series\&quot;:\&quot;EQ\&quot;,\r\n      \&quot;oms_order_id\&quot;:\&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74\&quot;,\r\n      \&quot;exchange_order_id\&quot;:\&quot;\&quot;,\r\n      \&quot;trigger_price\&quot;:0,\r\n      \&quot;stop_loss_value\&quot;:0,\r\n      \&quot;square_off_value\&quot;:0,\r\n      \&quot;trailing_stop_loss\&quot;:0,\r\n      \&quot;is_trailing\&quot;:false,\r\n      \&quot;execution_type\&quot;:\&quot;BO\&quot;\r\n },\r\n  \&quot;order_id\&quot;:\&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74\&quot;\r\n}&quot;</span><span class="p">);</span>
+<span class="n">Request</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="s">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="na">method</span><span class="p">(</span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="p">)</span>
+<span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;x-device-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;WEB&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;x-authorization-token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;content-type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="n">Response</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">CURL</span><span class="w"> </span><span class="o">*</span><span class="n">curl</span><span class="p">;</span>
+<span class="n">CURLcode</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="n">curl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curl_easy_init</span><span class="p">();</span>
+<span class="k">if</span><span class="p">(</span><span class="n">curl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span><span class="w"> </span><span class="n">CURLOPT_CUSTOMREQUEST</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PUT&quot;</span><span class="p">);</span>
+<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span><span class="w"> </span><span class="n">CURLOPT_URL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">);</span>
+<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span><span class="w"> </span><span class="n">CURLOPT_FOLLOWLOCATION</span><span class="p">,</span><span class="w"> </span><span class="mf">1L</span><span class="p">);</span>
+<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span><span class="w"> </span><span class="n">CURLOPT_DEFAULT_PROTOCOL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https&quot;</span><span class="p">);</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curl_slist</span><span class="w"> </span><span class="o">*</span><span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curl_slist_append</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x-device-type: WEB&quot;</span><span class="p">);</span>
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curl_slist_append</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x-authorization-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">);</span>
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curl_slist_append</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;content-type: application/json&quot;</span><span class="p">);</span>
+<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span><span class="w"> </span><span class="n">CURLOPT_HTTPHEADER</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; {</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">basket_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;BasketId&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">name</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;BasketName&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">order_info</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\r\n</span><span class="s"> {</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">exchange</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">NSE</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">instrument_token</span><span class="se">\&quot;</span><span class="s">:3045,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">client_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;ClientId&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">order_type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">LIMIT</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">price</span><span class="se">\&quot;</span><span class="s">:506.5,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">quantity</span><span class="se">\&quot;</span><span class="s">:1,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">disclosed_quantity</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">validity</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">DAY</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">product</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">MIS</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trading_symbol</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">SBIN-EQ</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">order_side</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">BUY</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">user_order_id</span><span class="se">\&quot;</span><span class="s">:10002,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">underlying_token</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">3045</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">series</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">EQ</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">oms_order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">exchange_order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trigger_price</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">stop_loss_value</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">square_off_value</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trailing_stop_loss</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">is_trailing</span><span class="se">\&quot;</span><span class="s">:false,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">execution_type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">BO</span><span class="se">\&quot;\r\n</span><span class="s"> },</span><span class="se">\r\n</span><span class="s">  </span><span class="se">\&quot;</span><span class="s">order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;\r\n</span><span class="s">}&quot;</span><span class="p">;</span>
+<span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span><span class="w"> </span><span class="n">CURLOPT_POSTFIELDS</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
+<span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">curl</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">curl_easy_cleanup</span><span class="p">(</span><span class="n">curl</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// You can also use other libraries such as `axios`,`jQuery`, `request` `Unirest`, etc.. this example uses `node.js` native`</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">https</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;follow-redirects&#39;</span><span class="p">).</span><span class="nx">https</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="s1">&#39;method&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+<span class="s1">&#39;hostname&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;pacetrader.pacefin.in&#39;</span><span class="p">,</span>
+<span class="s1">&#39;path&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/api/v1/basket/order&#39;</span><span class="p">,</span>
+<span class="s1">&#39;headers&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">&#39;x-device-type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;WEB&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;x-authorization-token&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;content-type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">},</span>
+<span class="s1">&#39;maxRedirects&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span>
+<span class="p">};</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">https</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">chunks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+
+<span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">});</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">postData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="s2">&quot;basket_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketId&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketName&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;order_info&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;exchange&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instrument_token&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">3045</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;client_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;LIMIT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;price&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">506.5</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;disclosed_quantity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;validity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;product&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trading_symbol&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;SBIN-EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_side&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;BUY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;user_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">10002</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;underlying_token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3045&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;series&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;oms_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;exchange_order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trigger_price&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;stop_loss_value&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;square_off_value&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trailing_stop_loss&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;is_trailing&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;execution_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;BO&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;order_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="p">});</span>
+
+<span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">postData</span><span class="p">);</span>
+
+<span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+
+<span class="n">dispatch_semaphore_t</span><span class="w"> </span><span class="n">sema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dispatch_semaphore_create</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="bp">NSMutableURLRequest</span><span class="w"> </span><span class="o">*</span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSMutableURLRequest</span><span class="w"> </span><span class="n">requestWithURL</span><span class="o">:</span><span class="p">[</span><span class="bp">NSURL</span><span class="w"> </span><span class="n">URLWithString</span><span class="o">:</span><span class="s">@&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">]</span>
+<span class="nl">cachePolicy</span><span class="p">:</span><span class="n">NSURLRequestUseProtocolCachePolicy</span>
+<span class="nl">timeoutInterval</span><span class="p">:</span><span class="mf">10.0</span><span class="p">];</span>
+<span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span>
+<span class="s">@&quot;x-device-type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;WEB&quot;</span><span class="p">,</span>
+<span class="s">@&quot;x-authorization-token&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">,</span>
+<span class="s">@&quot;content-type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;application/json&quot;</span>
+<span class="l">}</span><span class="p">;</span>
+
+<span class="p">[</span><span class="n">request</span><span class="w"> </span><span class="n">setAllHTTPHeaderFields</span><span class="o">:</span><span class="n">headers</span><span class="p">];</span>
+<span class="bp">NSData</span><span class="w"> </span><span class="o">*</span><span class="n">postData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="bp">NSData</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithData</span><span class="o">:</span><span class="p">[</span><span class="s">@&quot; {</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">basket_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;BasketId&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">name</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;BasketName&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">order_info</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\r\n</span><span class="s"> {</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">exchange</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">NSE</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">instrument_token</span><span class="se">\&quot;</span><span class="s">:3045,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">client_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;ClientId&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">order_type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">LIMIT</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">price</span><span class="se">\&quot;</span><span class="s">:506.5,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">quantity</span><span class="se">\&quot;</span><span class="s">:1,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">disclosed_quantity</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">validity</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">DAY</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">product</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">MIS</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trading_symbol</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">SBIN-EQ</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">order_side</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">BUY</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">user_order_id</span><span class="se">\&quot;</span><span class="s">:10002,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">underlying_token</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">3045</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">series</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">EQ</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">oms_order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">exchange_order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trigger_price</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">stop_loss_value</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">square_off_value</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trailing_stop_loss</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">is_trailing</span><span class="se">\&quot;</span><span class="s">:false,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">execution_type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">BO</span><span class="se">\&quot;\r\n</span><span class="s"> },</span><span class="se">\r\n</span><span class="s">  </span><span class="se">\&quot;</span><span class="s">order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;\r\n</span><span class="s">}&quot;</span><span class="w"> </span><span class="n">dataUsingEncoding</span><span class="o">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">request</span><span class="w"> </span><span class="n">setHTTPBody</span><span class="o">:</span><span class="n">postData</span><span class="p">];</span>
+
+<span class="p">[</span><span class="n">request</span><span class="w"> </span><span class="n">setHTTPMethod</span><span class="o">:</span><span class="s">@&quot;PUT&quot;</span><span class="p">];</span>
+
+<span class="bp">NSURLSession</span><span class="w"> </span><span class="o">*</span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSURLSession</span><span class="w"> </span><span class="n">sharedSession</span><span class="p">];</span>
+<span class="bp">NSURLSessionDataTask</span><span class="w"> </span><span class="o">*</span><span class="n">dataTask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">session</span><span class="w"> </span><span class="n">dataTaskWithRequest</span><span class="o">:</span><span class="n">request</span>
+<span class="nl">completionHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSData</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="bp">NSURLResponse</span><span class="w"> </span><span class="o">*</span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dispatch_semaphore_signal</span><span class="p">(</span><span class="n">sema</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="bp">NSHTTPURLResponse</span><span class="w"> </span><span class="o">*</span><span class="n">httpResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="bp">NSHTTPURLResponse</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+<span class="w">    </span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">parseError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nil</span><span class="p">;</span>
+<span class="w">    </span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="n">responseDictionary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSJSONSerialization</span><span class="w"> </span><span class="n">JSONObjectWithData</span><span class="o">:</span><span class="n">data</span><span class="w"> </span><span class="n">options</span><span class="o">:</span><span class="mi">0</span><span class="w"> </span><span class="n">error</span><span class="o">:&amp;</span><span class="n">parseError</span><span class="p">];</span>
+<span class="w">    </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span><span class="n">responseDictionary</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dispatch_semaphore_signal</span><span class="p">(</span><span class="n">sema</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">dataTask</span><span class="w"> </span><span class="n">resume</span><span class="p">];</span>
+<span class="n">dispatch_semaphore_wait</span><span class="p">(</span><span class="n">sema</span><span class="p">,</span><span class="w"> </span><span class="n">DISPATCH_TIME_FOREVER</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">open</span> <span class="nc">Lwt</span>
+<span class="k">open</span> <span class="nc">Cohttp</span>
+<span class="k">open</span> <span class="nc">Cohttp_lwt_unix</span>
+
+<span class="k">let</span> <span class="n">postData</span> <span class="o">=</span> <span class="n">ref</span> <span class="s2">&quot; {</span><span class="se">\r\n</span><span class="s2">    </span><span class="se">\&quot;</span><span class="s2">basket_id</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">&lt;BasketId&gt;</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">    </span><span class="se">\&quot;</span><span class="s2">name</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">&lt;BasketName&gt;</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">    </span><span class="se">\&quot;</span><span class="s2">order_info</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\r\n</span><span class="s2"> {</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">exchange</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">NSE</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">instrument_token</span><span class="se">\&quot;</span><span class="s2">:3045,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">client_id</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">&lt;ClientId&gt;</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">order_type</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">LIMIT</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">price</span><span class="se">\&quot;</span><span class="s2">:506.5,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">quantity</span><span class="se">\&quot;</span><span class="s2">:1,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">disclosed_quantity</span><span class="se">\&quot;</span><span class="s2">:0,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">validity</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">DAY</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">product</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">MIS</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">trading_symbol</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">SBIN-EQ</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">order_side</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">BUY</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">user_order_id</span><span class="se">\&quot;</span><span class="s2">:10002,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">underlying_token</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">3045</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">series</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">EQ</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">oms_order_id</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">exchange_order_id</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;\&quot;</span><span class="s2">,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">trigger_price</span><span class="se">\&quot;</span><span class="s2">:0,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">stop_loss_value</span><span class="se">\&quot;</span><span class="s2">:0,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">square_off_value</span><span class="se">\&quot;</span><span class="s2">:0,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">trailing_stop_loss</span><span class="se">\&quot;</span><span class="s2">:0,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">is_trailing</span><span class="se">\&quot;</span><span class="s2">:false,</span><span class="se">\r\n</span><span class="s2">      </span><span class="se">\&quot;</span><span class="s2">execution_type</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">BO</span><span class="se">\&quot;\r\n</span><span class="s2"> },</span><span class="se">\r\n</span><span class="s2">  </span><span class="se">\&quot;</span><span class="s2">order_id</span><span class="se">\&quot;</span><span class="s2">:</span><span class="se">\&quot;</span><span class="s2">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;\r\n</span><span class="s2">}&quot;</span><span class="o">;;</span>
+
+<span class="k">let</span> <span class="n">reqBody</span> <span class="o">=</span> 
+<span class="k">let</span> <span class="n">uri</span> <span class="o">=</span> <span class="nn">Uri</span><span class="p">.</span><span class="n">of_string</span> <span class="s2">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span> <span class="k">in</span>
+<span class="k">let</span> <span class="n">headers</span> <span class="o">=</span> <span class="nn">Header</span><span class="p">.</span><span class="n">init</span> <span class="bp">()</span>
+    <span class="o">|&gt;</span> <span class="k">fun</span> <span class="n">h</span> <span class="o">-&gt;</span> <span class="nn">Header</span><span class="p">.</span><span class="n">add</span> <span class="n">h</span> <span class="s2">&quot;x-device-type&quot;</span> <span class="s2">&quot;WEB&quot;</span>
+    <span class="o">|&gt;</span> <span class="k">fun</span> <span class="n">h</span> <span class="o">-&gt;</span> <span class="nn">Header</span><span class="p">.</span><span class="n">add</span> <span class="n">h</span> <span class="s2">&quot;x-authorization-token&quot;</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span>
+    <span class="o">|&gt;</span> <span class="k">fun</span> <span class="n">h</span> <span class="o">-&gt;</span> <span class="nn">Header</span><span class="p">.</span><span class="n">add</span> <span class="n">h</span> <span class="s2">&quot;content-type&quot;</span> <span class="s2">&quot;application/json&quot;</span>
+<span class="k">in</span>
+<span class="k">let</span> <span class="n">body</span> <span class="o">=</span> <span class="nn">Cohttp_lwt</span><span class="p">.</span><span class="nn">Body</span><span class="p">.</span><span class="n">of_string</span> <span class="o">!</span><span class="n">postData</span> <span class="k">in</span>
+
+<span class="nn">Client</span><span class="p">.</span><span class="n">call</span> <span class="o">~</span><span class="n">headers</span> <span class="o">~</span><span class="n">body</span> <span class="o">`</span><span class="nc">PUT</span> <span class="n">uri</span> <span class="o">&gt;&gt;=</span> <span class="k">fun</span> <span class="o">(_</span><span class="n">resp</span><span class="o">,</span> <span class="n">body</span><span class="o">)</span> <span class="o">-&gt;</span>
+<span class="n">body</span> <span class="o">|&gt;</span> <span class="nn">Cohttp_lwt</span><span class="p">.</span><span class="nn">Body</span><span class="p">.</span><span class="n">to_string</span> <span class="o">&gt;|=</span> <span class="k">fun</span> <span class="n">body</span> <span class="o">-&gt;</span> <span class="n">body</span>
+
+<span class="k">let</span> <span class="bp">()</span> <span class="o">=</span>
+<span class="k">let</span> <span class="n">respBody</span> <span class="o">=</span> <span class="nn">Lwt_main</span><span class="p">.</span><span class="n">run</span> <span class="n">reqBody</span> <span class="k">in</span>
+<span class="n">print_endline</span> <span class="o">(</span><span class="n">respBody</span><span class="o">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="x">//you can also use other libraries such as `Guzzle`, `HTTP_Request2`, `pcel_http`, etc..</span>
+<span class="cp">&lt;?php</span>
+
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
+
+<span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+<span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://pacetrader.pacefin.in/api/v1/basket/order&#39;</span><span class="p">,</span>
+<span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
+<span class="nx">CURLOPT_TIMEOUT</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+<span class="nx">CURLOPT_FOLLOWLOCATION</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<span class="nx">CURLOPT_HTTP_VERSION</span> <span class="o">=&gt;</span> <span class="nx">CURL_HTTP_VERSION_1_1</span><span class="p">,</span>
+<span class="nx">CURLOPT_CUSTOMREQUEST</span> <span class="o">=&gt;</span> <span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+<span class="nx">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span><span class="s1">&#39; {</span>
+<span class="s1">    &quot;basket_id&quot;:&quot;&lt;BasketId&gt;&quot;,</span>
+<span class="s1">    &quot;name&quot;:&quot;&lt;BasketName&gt;&quot;,</span>
+<span class="s1">    &quot;order_info&quot;:</span>
+<span class="s1">{</span>
+<span class="s1">    &quot;exchange&quot;:&quot;NSE&quot;,</span>
+<span class="s1">    &quot;instrument_token&quot;:3045,</span>
+<span class="s1">    &quot;client_id&quot;:&quot;&lt;ClientId&gt;&quot;,</span>
+<span class="s1">    &quot;order_type&quot;:&quot;LIMIT&quot;,</span>
+<span class="s1">    &quot;price&quot;:506.5,</span>
+<span class="s1">    &quot;quantity&quot;:1,</span>
+<span class="s1">    &quot;disclosed_quantity&quot;:0,</span>
+<span class="s1">    &quot;validity&quot;:&quot;DAY&quot;,</span>
+<span class="s1">    &quot;product&quot;:&quot;MIS&quot;,</span>
+<span class="s1">    &quot;trading_symbol&quot;:&quot;SBIN-EQ&quot;,</span>
+<span class="s1">    &quot;order_side&quot;:&quot;BUY&quot;,</span>
+<span class="s1">    &quot;user_order_id&quot;:10002,</span>
+<span class="s1">    &quot;underlying_token&quot;:&quot;3045&quot;,</span>
+<span class="s1">    &quot;series&quot;:&quot;EQ&quot;,</span>
+<span class="s1">    &quot;oms_order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;,</span>
+<span class="s1">    &quot;exchange_order_id&quot;:&quot;&quot;,</span>
+<span class="s1">    &quot;trigger_price&quot;:0,</span>
+<span class="s1">    &quot;stop_loss_value&quot;:0,</span>
+<span class="s1">    &quot;square_off_value&quot;:0,</span>
+<span class="s1">    &quot;trailing_stop_loss&quot;:0,</span>
+<span class="s1">    &quot;is_trailing&quot;:false,</span>
+<span class="s1">    &quot;execution_type&quot;:&quot;BO&quot;</span>
+<span class="s1">},</span>
+<span class="s1">&quot;order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="s1">}&#39;</span><span class="p">,</span>
+<span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;x-device-type: WEB&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;x-authorization-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;content-type: application/json&#39;</span>
+<span class="p">),</span>
+<span class="p">));</span>
+
+<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+
+<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$response</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nv">$headers</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="s2">&quot;System.Collections.Generic.Dictionary[[String],[String]]&quot;</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;x-device-type&quot;</span><span class="p">,</span> <span class="s2">&quot;WEB&quot;</span><span class="p">)</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;x-authorization-token&quot;</span><span class="p">,</span> <span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">)</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;content-type&quot;</span><span class="p">,</span> <span class="s2">&quot;application/json&quot;</span><span class="p">)</span>
+
+<span class="nv">$body</span> <span class="p">=</span> <span class="s2">&quot; {</span>
+<span class="se">`n</span><span class="s2">    </span><span class="se">`&quot;</span><span class="s2">basket_id</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">&lt;BasketId&gt;</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">    </span><span class="se">`&quot;</span><span class="s2">name</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">&lt;BasketName&gt;</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">    </span><span class="se">`&quot;</span><span class="s2">order_info</span><span class="se">`&quot;</span><span class="s2">:</span>
+<span class="se">`n</span><span class="s2"> {</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">exchange</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">NSE</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">instrument_token</span><span class="se">`&quot;</span><span class="s2">:3045,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">client_id</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">&lt;ClientId&gt;</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">order_type</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">LIMIT</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">price</span><span class="se">`&quot;</span><span class="s2">:506.5,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">quantity</span><span class="se">`&quot;</span><span class="s2">:1,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">disclosed_quantity</span><span class="se">`&quot;</span><span class="s2">:0,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">validity</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">DAY</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">product</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">MIS</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">trading_symbol</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">SBIN-EQ</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">order_side</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">BUY</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">user_order_id</span><span class="se">`&quot;</span><span class="s2">:10002,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">underlying_token</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">3045</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">series</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">EQ</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">oms_order_id</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">exchange_order_id</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;`&quot;</span><span class="s2">,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">trigger_price</span><span class="se">`&quot;</span><span class="s2">:0,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">stop_loss_value</span><span class="se">`&quot;</span><span class="s2">:0,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">square_off_value</span><span class="se">`&quot;</span><span class="s2">:0,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">trailing_stop_loss</span><span class="se">`&quot;</span><span class="s2">:0,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">is_trailing</span><span class="se">`&quot;</span><span class="s2">:false,</span>
+<span class="se">`n</span><span class="s2">      </span><span class="se">`&quot;</span><span class="s2">execution_type</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">BO</span><span class="se">`&quot;</span>
+<span class="se">`n</span><span class="s2"> },</span>
+<span class="se">`n</span><span class="s2">  </span><span class="se">`&quot;</span><span class="s2">order_id</span><span class="se">`&quot;</span><span class="s2">:</span><span class="se">`&quot;</span><span class="s2">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">`&quot;</span>
+<span class="se">`n</span><span class="s2">}&quot;</span>
+
+<span class="nv">$response</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="s1">&#39;https://pacetrader.pacefin.in/api/v1/basket/order&#39;</span> <span class="n">-Method</span> <span class="s1">&#39;PUT&#39;</span> <span class="n">-Headers</span> <span class="nv">$headers</span> <span class="n">-Body</span> <span class="nv">$body</span>
+<span class="nv">$response</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">//</span><span class="w"> </span><span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">libraries</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">`curl`</span><span class="p">,</span><span class="w"> </span><span class="n">`resty`</span><span class="p">,</span><span class="w"> </span><span class="n">etc..</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">httr</span><span class="p">)</span>
+
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
+<span class="s">&#39;x-device-type&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;WEB&#39;</span><span class="p">,</span>
+<span class="s">&#39;x-authorization-token&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="p">,</span>
+<span class="s">&#39;content-type&#39;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;application/json&#39;</span>
+<span class="p">)</span>
+
+<span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;{</span>
+<span class="s">&quot;basket_id&quot;: &quot;&lt;BasketId&gt;&quot;,</span>
+<span class="s">&quot;name&quot;: &quot;&lt;BasketName&gt;&quot;,</span>
+<span class="s">&quot;order_info&quot;: {</span>
+<span class="s">    &quot;exchange&quot;: &quot;NSE&quot;,</span>
+<span class="s">    &quot;instrument_token&quot;: 3045,</span>
+<span class="s">    &quot;client_id&quot;: &quot;&lt;ClientId&gt;&quot;,</span>
+<span class="s">    &quot;order_type&quot;: &quot;LIMIT&quot;,</span>
+<span class="s">    &quot;price&quot;: 506.5,</span>
+<span class="s">    &quot;quantity&quot;: 1,</span>
+<span class="s">    &quot;disclosed_quantity&quot;: 0,</span>
+<span class="s">    &quot;validity&quot;: &quot;DAY&quot;,</span>
+<span class="s">    &quot;product&quot;: &quot;MIS&quot;,</span>
+<span class="s">    &quot;trading_symbol&quot;: &quot;SBIN-EQ&quot;,</span>
+<span class="s">    &quot;order_side&quot;: &quot;BUY&quot;,</span>
+<span class="s">    &quot;user_order_id&quot;: 10002,</span>
+<span class="s">    &quot;underlying_token&quot;: &quot;3045&quot;,</span>
+<span class="s">    &quot;series&quot;: &quot;EQ&quot;,</span>
+<span class="s">    &quot;oms_order_id&quot;: &quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;,</span>
+<span class="s">    &quot;exchange_order_id&quot;: &quot;&quot;,</span>
+<span class="s">    &quot;trigger_price&quot;: 0,</span>
+<span class="s">    &quot;stop_loss_value&quot;: 0,</span>
+<span class="s">    &quot;square_off_value&quot;: 0,</span>
+<span class="s">    &quot;trailing_stop_loss&quot;: 0,</span>
+<span class="s">    &quot;is_trailing&quot;: false,</span>
+<span class="s">    &quot;execution_type&quot;: &quot;BO&quot;</span>
+<span class="s">},</span>
+<span class="s">&quot;order_id&quot;: &quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="s">}&#39;</span><span class="p">;</span>
+
+<span class="n">res</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">VERB</span><span class="p">(</span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">body</span><span class="p">,</span><span class="w"> </span><span class="nf">add_headers</span><span class="p">(</span><span class="n">headers</span><span class="p">))</span>
+
+<span class="nf">cat</span><span class="p">(</span><span class="nf">content</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;text&#39;</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s2">&quot;json&quot;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s2">&quot;net/http&quot;</span>
+
+<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">URI</span><span class="p">(</span><span class="s2">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">)</span>
+
+<span class="n">https</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+<span class="n">https</span><span class="o">.</span><span class="n">use_ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kp">true</span>
+
+<span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Put</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="o">[</span><span class="s2">&quot;x-device-type&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;WEB&quot;</span>
+<span class="n">request</span><span class="o">[</span><span class="s2">&quot;x-authorization-token&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span>
+<span class="n">request</span><span class="o">[</span><span class="s2">&quot;content-type&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span>
+<span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">JSON</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span>
+<span class="s2">&quot;basket_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketId&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;BasketName&gt;&quot;</span><span class="p">,</span>
+<span class="s2">&quot;order_info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;exchange&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;instrument_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3045</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LIMIT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">506</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;disclosed_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;validity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;product&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MIS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trading_symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SBIN-EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;order_side&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BUY&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;user_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10002</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;underlying_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3045&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;series&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;oms_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;exchange_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trigger_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;stop_loss_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;square_off_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;trailing_stop_loss&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;is_trailing&quot;</span><span class="p">:</span><span class="w"> </span><span class="kp">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;execution_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BO&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="p">})</span>
+
+<span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">https</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span><span class="w"> </span><span class="n">response</span><span class="o">.</span><span class="n">read_body</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># You can also use other libraries such as `curl`, `wget`, etc..</span>
+
+<span class="nb">printf</span><span class="w"> </span><span class="s1">&#39; {</span>
+<span class="s1">&quot;basket_id&quot;:&quot;&lt;BasketId&gt;&quot;,</span>
+<span class="s1">&quot;name&quot;:&quot;&lt;BasketName&gt;&quot;,</span>
+<span class="s1">&quot;order_info&quot;:</span>
+<span class="s1">{</span>
+<span class="s1">  &quot;exchange&quot;:&quot;NSE&quot;,</span>
+<span class="s1">  &quot;instrument_token&quot;:3045,</span>
+<span class="s1">  &quot;client_id&quot;:&quot;&lt;ClientId&gt;&quot;,</span>
+<span class="s1">  &quot;order_type&quot;:&quot;LIMIT&quot;,</span>
+<span class="s1">  &quot;price&quot;:506.5,</span>
+<span class="s1">  &quot;quantity&quot;:1,</span>
+<span class="s1">  &quot;disclosed_quantity&quot;:0,</span>
+<span class="s1">  &quot;validity&quot;:&quot;DAY&quot;,</span>
+<span class="s1">  &quot;product&quot;:&quot;MIS&quot;,</span>
+<span class="s1">  &quot;trading_symbol&quot;:&quot;SBIN-EQ&quot;,</span>
+<span class="s1">  &quot;order_side&quot;:&quot;BUY&quot;,</span>
+<span class="s1">  &quot;user_order_id&quot;:10002,</span>
+<span class="s1">  &quot;underlying_token&quot;:&quot;3045&quot;,</span>
+<span class="s1">  &quot;series&quot;:&quot;EQ&quot;,</span>
+<span class="s1">  &quot;oms_order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;,</span>
+<span class="s1">  &quot;exchange_order_id&quot;:&quot;&quot;,</span>
+<span class="s1">  &quot;trigger_price&quot;:0,</span>
+<span class="s1">  &quot;stop_loss_value&quot;:0,</span>
+<span class="s1">  &quot;square_off_value&quot;:0,</span>
+<span class="s1">  &quot;trailing_stop_loss&quot;:0,</span>
+<span class="s1">  &quot;is_trailing&quot;:false,</span>
+<span class="s1">  &quot;execution_type&quot;:&quot;BO&quot;</span>
+<span class="s1">},</span>
+<span class="s1">&quot;order_id&quot;:&quot;a5d13c1f-f99c-4230-ad19-9ed8e826ee74&quot;</span>
+<span class="s1">}&#39;</span><span class="p">|</span><span class="w"> </span>http<span class="w">  </span>--follow<span class="w"> </span>--timeout<span class="w"> </span><span class="m">3600</span><span class="w"> </span>PUT<span class="w"> </span><span class="s1">&#39;https://pacetrader.pacefin.in/api/v1/basket/order&#39;</span><span class="w"> </span><span class="se">\</span>
+x-device-type:<span class="s1">&#39;WEB&#39;</span><span class="w"> </span><span class="se">\</span>
+x-authorization-token:<span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&#39;</span><span class="w"> </span><span class="se">\</span>
+content-type:<span class="s1">&#39;application/json&#39;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">parameters</span> <span class="p">=</span> <span class="s">&quot; {</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">basket_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;BasketId&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">name</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;BasketName&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">    </span><span class="se">\&quot;</span><span class="s">order_info</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\r\n</span><span class="s"> {</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">exchange</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">NSE</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">instrument_token</span><span class="se">\&quot;</span><span class="s">:3045,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">client_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">&lt;ClientId&gt;</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">order_type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">LIMIT</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">price</span><span class="se">\&quot;</span><span class="s">:506.5,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">quantity</span><span class="se">\&quot;</span><span class="s">:1,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">disclosed_quantity</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">validity</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">DAY</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">product</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">MIS</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trading_symbol</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">SBIN-EQ</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">order_side</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">BUY</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">user_order_id</span><span class="se">\&quot;</span><span class="s">:10002,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">underlying_token</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">3045</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">series</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">EQ</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">oms_order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">exchange_order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;\&quot;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trigger_price</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">stop_loss_value</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">square_off_value</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">trailing_stop_loss</span><span class="se">\&quot;</span><span class="s">:0,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">is_trailing</span><span class="se">\&quot;</span><span class="s">:false,</span><span class="se">\r\n</span><span class="s">      </span><span class="se">\&quot;</span><span class="s">execution_type</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">BO</span><span class="se">\&quot;\r\n</span><span class="s"> },</span><span class="se">\r\n</span><span class="s">  </span><span class="se">\&quot;</span><span class="s">order_id</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">a5d13c1f-f99c-4230-ad19-9ed8e826ee74</span><span class="se">\&quot;\r\n</span><span class="s">}&quot;</span>
+<span class="kd">let</span> <span class="nv">postData</span> <span class="p">=</span> <span class="n">parameters</span><span class="p">.</span><span class="n">data</span><span class="p">(</span><span class="n">using</span><span class="p">:</span> <span class="p">.</span><span class="n">utf8</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nv">request</span> <span class="p">=</span> <span class="n">URLRequest</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="n">URL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;https://pacetrader.pacefin.in/api/v1/basket/order&quot;</span><span class="p">)</span><span class="o">!</span><span class="p">,</span><span class="n">timeoutInterval</span><span class="p">:</span> <span class="nb">Double</span><span class="p">.</span><span class="n">infinity</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="n">addValue</span><span class="p">(</span><span class="s">&quot;WEB&quot;</span><span class="p">,</span> <span class="n">forHTTPHeaderField</span><span class="p">:</span> <span class="s">&quot;x-device-type&quot;</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="n">addValue</span><span class="p">(</span><span class="s">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg&quot;</span><span class="p">,</span> <span class="n">forHTTPHeaderField</span><span class="p">:</span> <span class="s">&quot;x-authorization-token&quot;</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="n">addValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">,</span> <span class="n">forHTTPHeaderField</span><span class="p">:</span> <span class="s">&quot;content-type&quot;</span><span class="p">)</span>
+
+<span class="n">request</span><span class="p">.</span><span class="n">httpMethod</span> <span class="p">=</span> <span class="s">&quot;PUT&quot;</span>
+<span class="n">request</span><span class="p">.</span><span class="n">httpBody</span> <span class="p">=</span> <span class="n">postData</span>
+
+<span class="kd">let</span> <span class="nv">task</span> <span class="p">=</span> <span class="n">URLSession</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">dataTask</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span> 
+<span class="k">guard</span> <span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
+    <span class="k">return</span>
+<span class="p">}</span>
+<span class="bp">print</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="n">encoding</span><span class="p">:</span> <span class="p">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">task</span><span class="p">.</span><span class="n">resume</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 

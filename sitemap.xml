@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/funds/</loc>
-         <lastmod>2023-11-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://example.com/login/</loc>
          <lastmod>2023-11-01</lastmod>
          <changefreq>daily</changefreq>
@@ -32,6 +27,16 @@
     </url>
     <url>
          <loc>https://example.com/contract_details/search_scrip/</loc>
+         <lastmod>2023-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/funds/fetch-funds-v1/</loc>
+         <lastmod>2023-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/funds/fetch-funds-v2/</loc>
          <lastmod>2023-11-01</lastmod>
          <changefreq>daily</changefreq>
     </url>

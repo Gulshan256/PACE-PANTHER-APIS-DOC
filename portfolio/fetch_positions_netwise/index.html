@@ -340,16 +340,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../funds/" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../funds/fetch-funds-v1/" class="md-tabs__link">
+          
   
   Funds
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -1501,6 +1502,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Response">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#code-examples" class="md-nav__link">
     Code Examples
@@ -1824,16 +1838,83 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../funds/" class="md-nav__link">
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     Funds
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Funds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V1
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1891,6 +1972,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Response">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#code-examples" class="md-nav__link">
     Code Examples
@@ -1917,8 +2011,6 @@
                 
                   
 
-
-  <h1>Fetch Positions Netwise</h1>
 
 <h2 id="fetch-positions-netwise">Fetch positions netwise</h2>
 <table>
@@ -1988,6 +2080,53 @@
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;clientid&gt;&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;historical&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">Respo</span><span class="kc">nse</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="p">{</span><span class="w">     </span>
+<span class="w">     </span><span class="nt">&quot;average_buy_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40520</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;average_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;average_sell_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40538</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;buy_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40520</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;buy_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;cf_buy_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;cf_buy_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;cf_sell_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;cf_sell_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEMO1&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;close_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;exchange&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MCX&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;instrument_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">222895</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;ltp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40520</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;multiplier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;net_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;net_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;previous_close&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40697</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;pro_cli&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CLIENT&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;prod_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;product&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NRML&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;realized_mtm&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;segment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FutOpt&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;sell_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40538</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;sell_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GOLDGUINEA&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">222895</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;trading_symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GOLDGUINEA20NOVFUT&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;v_login_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEMO1&quot;</span>
+<span class="w">     </span><span class="p">}]</span>
+<span class="w">     </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<h1 id="error-response">Error Response</h1>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">44000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;`type` is invalid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="code-examples">Code Examples</h3>

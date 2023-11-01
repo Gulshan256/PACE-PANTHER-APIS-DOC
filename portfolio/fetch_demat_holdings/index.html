@@ -340,16 +340,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../funds/" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../funds/fetch-funds-v1/" class="md-tabs__link">
+          
   
   Funds
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -1522,6 +1523,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#code-examples" class="md-nav__link">
     Code Examples
   </a>
@@ -1824,16 +1839,83 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../funds/" class="md-nav__link">
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     Funds
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Funds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V1
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1887,6 +1969,20 @@
           <li class="md-nav__item">
   <a href="#request-body" class="md-nav__link">
     Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -1984,6 +2080,57 @@
 <span class="w">    </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;clientid&gt;&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
+<h3 id="response">Response</h3>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;data&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;holdings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;branch_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;buy_avg&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">240.2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;buy_avg_mtm&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">277.7500000000006</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEMO1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;exchange&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NSE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;free_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;instrument_details&quot;</span><span class="p">:{</span>
+<span class="w">        </span><span class="nt">&quot;exchange&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;instrument_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EQ&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;instrument_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3045</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;trading_symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SBIN-EQ&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">&quot;isin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INE062A01020&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ltp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">245.25</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;pending_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;pledge_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;previous_close&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">240.2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SBIN&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;t0_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;t0_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;t1_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;t1_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;t2_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;t2_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;today_pledge_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3045</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;trading_symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SBIN&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;transaction_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;used_quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}]</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">     </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+<span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="error-response">Error Response</h3>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;data&quot;</span><span class="p">:{</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">     </span><span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">44000</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;`type` is invalid&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<hr />
 <h3 id="code-examples">Code Examples</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">python - http.client</label><label for="__tabbed_1_2">python - requests</label><label for="__tabbed_1_3">javascript - fetch</label><label for="__tabbed_1_4">javascript - jquery</label><label for="__tabbed_1_5">javascript - XHr</label></div>
 <div class="tabbed-content">

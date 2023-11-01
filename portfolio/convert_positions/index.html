@@ -340,16 +340,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../funds/" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../funds/fetch-funds-v1/" class="md-tabs__link">
+          
   
   Funds
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -1528,8 +1529,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#request-parameters" class="md-nav__link">
+    Request Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#request-body" class="md-nav__link">
     Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -1817,16 +1839,83 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../funds/" class="md-nav__link">
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     Funds
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Funds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V1
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1871,8 +1960,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#request-parameters" class="md-nav__link">
+    Request Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#request-body" class="md-nav__link">
     Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -1948,18 +2058,58 @@
 </tr>
 </tbody>
 </table>
-<pre><code>### Request Parameters
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-</code></pre>
-<p>| <code>client_id</code> | <code>string</code> | ClientId <code>&lt;clintid&gt;</code> |
-| <code>exchange</code> | <code>string</code> | NSE,BSE,NFO,CDS,MCX |
-| <code>instrument_token</code> | <code>int</code> | 3045 (example) |
-| <code>product</code> | <code>string</code> | CNC,MIS,NRML |
-| <code>new_product</code> | <code>string</code> | CNC,MIS,NRML |
-| <code>quantity</code> | <code>int</code> | 100 |
-| <code>validity</code> | <code>string</code> | DAY or IOC |
-| <code>order_side</code> | <code>string</code> | SELL or BUY |</p>
+<h3 id="request-parameters">Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_id</code></td>
+<td><code>string</code></td>
+<td>ClientId <code>&lt;clintid&gt;</code></td>
+</tr>
+<tr>
+<td><code>exchange</code></td>
+<td><code>string</code></td>
+<td>NSE,BSE,NFO,CDS,MCX</td>
+</tr>
+<tr>
+<td><code>instrument_token</code></td>
+<td><code>int</code></td>
+<td>3045 (example)</td>
+</tr>
+<tr>
+<td><code>product</code></td>
+<td><code>string</code></td>
+<td>CNC,MIS,NRML</td>
+</tr>
+<tr>
+<td><code>new_product</code></td>
+<td><code>string</code></td>
+<td>CNC,MIS,NRML</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><code>int</code></td>
+<td>100</td>
+</tr>
+<tr>
+<td><code>validity</code></td>
+<td><code>string</code></td>
+<td>DAY or IOC</td>
+</tr>
+<tr>
+<td><code>order_side</code></td>
+<td><code>string</code></td>
+<td>SELL or BUY</td>
+</tr>
+</tbody>
+</table>
 <h3 id="request-body">Request Body</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;ClientId&gt;&quot;</span><span class="p">,</span>
@@ -1970,6 +2120,22 @@
 <span class="w">    </span><span class="nt">&quot;quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;validity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DAY&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;order_side&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SELL&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="response">Response</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Conversion completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="error-response">Error Response</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error from backend: (1013)-template is not assigned for this client&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="code-examples">Code Examples</h3>

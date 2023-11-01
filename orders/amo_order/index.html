@@ -340,16 +340,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../funds/" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../funds/fetch-funds-v1/" class="md-tabs__link">
+          
   
   Funds
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -599,8 +600,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#failed-response" class="md-nav__link">
-    Failed Response
+  <a href="#error-response" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -654,8 +655,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#faield-response" class="md-nav__link">
-    faield response
+  <a href="#error-response_1" class="md-nav__link">
+    Error response
   </a>
   
 </li>
@@ -709,8 +710,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#failed-response_1" class="md-nav__link">
-    Failed Response
+  <a href="#error-response_2" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -1952,16 +1953,83 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../funds/" class="md-nav__link">
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     Funds
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Funds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V1
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../funds/fetch-funds-v2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch Funds V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2029,8 +2097,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#failed-response" class="md-nav__link">
-    Failed Response
+  <a href="#error-response" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -2084,8 +2152,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#faield-response" class="md-nav__link">
-    faield response
+  <a href="#error-response_1" class="md-nav__link">
+    Error response
   </a>
   
 </li>
@@ -2139,8 +2207,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#failed-response_1" class="md-nav__link">
-    Failed Response
+  <a href="#error-response_2" class="md-nav__link">
+    Error Response
   </a>
   
 </li>
@@ -2319,20 +2387,19 @@
 </code></pre></div>
 <h3 id="sucess-response">sucess Response</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order placed successfully&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">&quot;oms_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20211103-25&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order Placed Successfully&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="failed-response">Failed Response</h3>
+<h3 id="error-response">Error Response</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order placed failed&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error from backend: (1)-Trigger price cannot be less than last trade price.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="code-examples"><h2> Code Examples:</h2></h3>
@@ -3091,16 +3158,20 @@ content-type:<span class="s1">&#39;application/json&#39;</span>
 </code></pre></div>
 <h3 id="sucess-response_1">sucess response</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:{</span>
+<span class="w">        </span><span class="nt">&quot;oms_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20220106-156&quot;</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order modification request submitted&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="faield-response">faield response</h3>
+<h3 id="error-response_1">Error response</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Failed&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid order type&quot;</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45010</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Something went wrong&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="code-examples_1">Code Examples</h3>
@@ -3796,14 +3867,20 @@ content-type:<span class="s1">&#39;application/json&#39;</span>
 </code></pre></div>
 <h3 id="success-response">Success Response</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order cancelled successfully&quot;</span>
+<span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;oms_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20220106-77&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order cancellation request submitted for OMS Order: 20220106-77&quot;</span><span class="p">,</span>
+<span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="failed-response_1">Failed Response</h3>
+<h3 id="error-response_2">Error Response</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;failed&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Order not found&quot;</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Request Unauthorised&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="example-code">Example Code</h3>
