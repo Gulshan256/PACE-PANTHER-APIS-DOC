@@ -1,0 +1,151 @@
+site_name: PocketFul API
+site_url: https://example.com/
+
+nav:
+  - Introduction: index.md
+  - Login: login.md
+
+  # - Orders: orders/orders.md
+  - 'Orders': 
+    - Types of Orders: orders/order_types.md
+    - Regular Orders: orders/regular_order.md
+    - AMO - After Market Orders: orders/amo_order.md
+    - 'Conditional Orders':
+      - 'BO - Bracket Order' : 
+        - Place BO : orders/conditional/bo-order.md
+        - Modify Bo : orders/conditional/bo-modify.md
+        - Cancel BO : orders/conditional/bo-cancel.md
+
+      - CO - Cover Order: 
+        - Place CO : orders/conditional/co-order.md
+        - Modify CO : orders/conditional/co-modify.md
+        - Cancel CO : orders/conditional/co-cancel.md
+
+      - Spread Order: 
+        - Place spread order : orders/conditional/spread-order.md
+        - Modify spread order : orders/conditional/spread-modify.md
+        - Cancel spread order : orders/conditional/spread-cancel.md
+
+    - Order Book:
+      - Panding Orders: orders/orderbook/panding-orders.md
+      - Completed Orders: orders/orderbook/completed-orders.md
+      - Trade Book: orders/orderbook/trade-book.md
+      - Order History: orders/orderbook/order-history.md
+
+
+    - Basket Orders: 
+      - create basket : orders/basket/create-basket.md
+      - Fetch Basket : orders/basket/fetch-basket.md
+      - Delete Basket : orders/basket/delete-basket.md
+      - Add Basket Instruments : orders/basket/add-basket-instruments.md
+      - Edit Basket Instruments : orders/basket/edit-basket-instruments.md
+      - Delete Basket Instruments : orders/basket/delete-basket-instruments.md
+      - Rename Basket : orders/basket/rename-basket.md
+      - Excuting Basket : orders/basket/excuting-basket.md
+
+    - GTT Orders: 
+      - Create GTT : orders/gtt/create-gtt.md
+      - Fetch GTT : orders/gtt/fetch-gtt.md
+      - Cancel GTT : orders/gtt/cancel-gtt.md
+      - Modify GTT : orders/gtt/modify-gtt.md
+
+
+  - 'Portfolio':
+    - Intro Portfolio: portfolio/portfolio.md
+    - Fetch Positions Daywise: portfolio/fetch_positions_daywise.md
+    - Fetch Positions Netwise: portfolio/fetch_positions_netwise.md
+    - Fetch Demat Holdings : portfolio/fetch_demat_holdings.md
+    - Convert Positions : portfolio/convert_positions.md
+
+  - Profile: profile.md
+  - 'Contract Details':
+    - contract_details/search_scrip.md
+    - contract_details/scrip_Info.md
+  
+  - Option Chain: option_chain.md
+  - IPO: 
+    - ipo/get_all_ipo.md
+    - ipo/place_ipo_order.md
+    - ipo/fetch_ipo_order.md
+    - ipo/cancel_ipo_order.md
+  - Funds: funds.md
+
+
+
+
+# theme:
+#   name: null
+#   custom_dir: 'custom_theme/'
+  
+markdown_extensions:
+  - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+
+
+theme:
+  language: en
+  font:
+    text: Roboto
+  name: material
+  # name: windmill
+  # name: readthedocs
+ 
+  palette:
+    
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    
+    
+  features:
+    - content.tabs.links
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.light
+    - navigation.instant
+    - content.code.copy
+    - content.code.toggle
+    - content.code.prettify
+    - content.code.select
+    - content.code.annotate
+    - content.code.fence_code
+
+  
+
+
+
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+extra:
+  generator: False
+  # last_updated: true
+  # Footer: true
+  # Footer_text: "© 2021 Pocketful Fintech Private Limited. All rights reserved."
+  # Footer_link: "https://www.pocketful.in/"
+
+
+
+
