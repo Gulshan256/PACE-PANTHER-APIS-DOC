@@ -77,6 +77,10 @@ content-type | application/json
 }
 ```
 
+
+
+____________________________________________________________________________________
+
 ## Code Examples
 
 === "python - http.client"

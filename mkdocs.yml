@@ -68,7 +68,9 @@ nav:
     - ipo/place_ipo_order.md
     - ipo/fetch_ipo_order.md
     - ipo/cancel_ipo_order.md
-  - Funds: funds.md
+  - Funds: 
+    - Fetch Funds V1: funds/fetch-funds-v1.md
+    - Fetch Funds V2: funds/fetch-funds-v2.md
 
 
 

@@ -67,24 +67,28 @@ content-type | application/json
 }
 ```
 
-## Sucess Response
+## Response
 ```json
 {
-    "status": "success",
-    "message": "Order modified successfully",
     "data": {
-        
-    }
+        "basket_id": "",
+        "message": "basket Order modified Successfully"
+    },
+    "message": "Order modified successfully",
+    "status": "success"
 }
 ```
 
 ## Failed Response
 ```json
+
 {
-    "status": "failed",
-    "message": "Order modification failed",
-    "data": null
+    "data": {},
+    "error_code": 44000,
+    "message": "`trigger_price` is invalid",
+    "status": "error"
 }
+
 ```
 
 

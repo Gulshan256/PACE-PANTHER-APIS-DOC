@@ -60,23 +60,22 @@ content-type | application/json
 ### sucess Response
 ```json
 {
-    "status": "success",
-    "message": "Order placed successfully",
     "data": {
-        
-    }
+      "oms_order_id": "20211103-25"
+    },
+    "message": "Order Placed Successfully",
+    "status": "success"
 }
 ```
 
-### Failed Response
+### Error Response
 
 ```json
 {
-    "status": "error",
-    "message": "Order placed failed",
-    "data": {
-        
-    }
+    "data": {},
+    "error_code": 45000,
+    "message": "Error from backend: (1)-Trigger price cannot be less than last trade price.",
+    "status": "error"
 }
 ```
 
@@ -798,19 +797,23 @@ content-type | application/json
 ### sucess response
 ```json
 {
-    "status": "success",
-    "data": {
-        
+    "data":{
+        "oms_order_id": "20220106-156"
     }
+    "message": "Order modification request submitted",
+    "status": "success"
 }
 
 ```
 
-### faield response
+### Error response
 ```json
 {
-    "status": "Failed",
-    "message": "Invalid order type"
+    "data":{
+    }
+    "error_code": 45010,
+    "message": "Something went wrong",
+    "status": "error"
 }
 
 ```
@@ -1524,16 +1527,22 @@ content-type | application/json
 ### Success Response
 ```json
 {
-    "status": "success",
-    "message": "Order cancelled successfully"
+"data": {
+    "oms_order_id": "20220106-77"
+},
+"message": "Order cancellation request submitted for OMS Order: 20220106-77",
+"status": "success"
 }
 ```
 
-### Failed Response
+### Error Response
 ```json
 {
-    "status": "failed",
-    "message": "Order not found"
+    "status": "error",
+    "message": "Request Unauthorised",
+    "error_code": 40000,
+    "data":{
+    }
 }
 ```
 

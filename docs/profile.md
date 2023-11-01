@@ -28,6 +28,49 @@ content-type | application/json
 ```
 
 
+# Response
+```json
+{
+    "data": {
+        "bo_id": [
+            "1206140012061400"
+        ],
+        "client_id": "TEST1",
+        "ddpi": false,
+        "email_id": "test@TRADELAB.IN",
+        "exchanges_subscribed": [
+            "NFO",
+            "NSE",
+            "BSE",
+            "CDS"
+        ],
+        "name": "DEMO",
+        "poa_enabled": true,
+        "products_enabled": [
+            "NRML",
+            "CNC",
+            "MIS"
+        ],
+        "status": "active"
+    },
+    "message": "",
+    "status": "success"
+}
+```
+
+
+### Error Response
+```json
+{
+  "status": "error",
+  "message": "Request forbidden",
+  "error_code": 40000,
+  "data":{
+  }
+}
+
+```
+____________________________________________________________________________________________________________________
 
 
 ### Code Examples

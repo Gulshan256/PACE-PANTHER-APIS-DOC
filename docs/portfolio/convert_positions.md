@@ -15,9 +15,9 @@ content-type | application/json
 
 
 
-    ### Request Parameters
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
+### Request Parameters
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 | `client_id` | `string` | ClientId `<clintid>` |
 | `exchange` | `string` | NSE,BSE,NFO,CDS,MCX |
 | `instrument_token` | `int` | 3045 (example) |
@@ -41,6 +41,27 @@ content-type | application/json
     "order_side": "SELL"
 }
 ```
+
+### Response
+```json
+{
+    "data": {},
+    "message": "Conversion completed",
+    "status": "success"
+}
+```
+
+### Error Response
+```json
+{
+    "data": {
+    },
+    "error_code": 45000,
+    "message": "Error from backend: (1013)-template is not assigned for this client",
+    "status": "error"
+}
+```
+
 
 ### Code Examples
 

@@ -61,23 +61,30 @@ content-type | application/json
 }
 ```
 
-### Success Response
+### Response
 ```json
 {
-    "status": "success",
-    "message": "Order place successfully"
-}
+    "data":
+    {
+       "oms_order_id": "200018000000003",
+       "user_order_id": 10002
+    }
+    "message": "Order place successfully",
+    "status": "success"
+  }
 ```
 
-### failed Response
+### Error Response
 ```json
-{
-    "status": "error",
-    "message": "Order place failed"
-}
+ {
+    "data": {},
+    "error_code": 44000,
+    "message": "`product` is invalid",
+    "status": "error"
+  }
 ```
 
-### <h2> Code Examples:</h2>
+###  Code Examples
 
 === "python - http.client"
     ``` python
@@ -806,19 +813,25 @@ content-type | application/json
 ```
 
 
-### Success Response
+### Response
 ```json
 {
-    "status": "success",
-    "message": "Order modified successfully"
+    "data":{
+        "oms_order_id": "200018000000003"
+    }
+    "message": "Order modification request submitted",
+    "status": "success"
 }
 ```
 
-### failed Response
+### Error Response
 ```json
 {
-    "status": "error",
-    "message": "Order modification failed"
+    "data":{
+    }
+    "error_code": 45010,
+    "message": "Something went wrong",
+    "status": "error"
 }
 ```
 
@@ -1526,24 +1539,30 @@ content-type | application/json
 ### Request Body
 ```json
 {
-  
-
+    "client_id": "SC3013",
+    "execution_type": "REGULAR"  
 }
 ```
 
 ### Success Response
 ```json
 {
-    "status": "",
-    "message": ""
+    "data": {
+        "oms_order_id": "20211103-50"
+    },
+    "message": "Order cancellation request submitted for OMS Order: 20211103-50",
+    "status": "success"
 }
 ```
 
-### failed Response
+### Error Response
 ```json
 {
-    "status": "",
-    "message": ""
+    "status": "error",
+    "message": "Request Unauthorised",
+    "error_code": 40000,
+    "data":{
+    }
 }
 ```
 

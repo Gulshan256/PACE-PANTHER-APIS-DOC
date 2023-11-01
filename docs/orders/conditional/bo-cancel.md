@@ -39,19 +39,25 @@ content-type | application/json
 }
 ```
 
-## Suceess Response
+## Response
 ```json
 {
-    "status": "success",
-    "message": "Order cancelled successfully"
+    "data": {
+        "basket_id": "",
+        "message": "Order Cancelled Successfully"
+    },
+    "message": "",
+    "status": "success"
 }
 ```
 
-## Failed Response
+## Error Response
 ```json
 {
-    "status": "failed",
-    "message": "Order not found"
+    "data": {},
+    "error_code": 44000,
+    "message": "`exchange_order_id` can't be blank",
+    "status": "error"
 }
 ```
 

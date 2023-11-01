@@ -1,13 +1,14 @@
 # Funds
 
-## Fetch Funds V1
+## Fetch Funds V2
+This API is used to fetch Funds. The query params are client id and type is all. In response the V2 fund's data like clien† id, headers, description etc. is provided. In case of error, It shows `Request Unauthorised`.
 
-Fetches the user's funds.
+
 
 ## Request
 | Request Type | APIs    | Endpoint                               | Description                     |
 |-------------- | ------- | -------------------------------------- | --------------------------------- |
-| `GET`         | `Funds` | `https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all` | Fetches the user's funds. |
+| `GET`         | `Fundsv2` | `https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all` | Fetches the user's funds. |
 
 
 ## Headers
@@ -35,9 +36,63 @@ content-type | application/json
 }
 ```
 
+## Response
+```json
+{
+    "data":{
+    "client_id": "DEMO1",
+    "headers": [
+    "Description",
+    ""]
+    "values": [
+    {
+    "0": "Available Margin",
+    "1": "8239.85"}{
+    "0": "Margin Used",
+    "1": "19.34"}{
+    "0": "Opening Balance",
+    "1": "1781.24"}{
+    "0": "Adhoc Deposit",
+    "1": "6500.00"}{
+    "0": "Notion",
+    "1": "0.00"}{
+    "0": "Pay In",
+    "1": "0.00"}{
+    "0": "Pay out",
+    "1": "0.00"}{
+    "0": "Pledge Benefit",
+    "1": "0.00"}{
+    "0": "Equity Credit Sell",
+    "1": "0.00"}{
+    "0": "Option Credit For Sell",
+    "1": "0.00"}{
+    "0": "Realized MTM",
+    "1": "0.00"}{
+    "0": "Unrealized MTM",
+    "1": "-0.05"}]
+    }
+    "message": "",
+    "status": "success"
+}
+
+```
+
+## Error Response
+```json
+{
+    "status": "error",
+    "message": "Request Unauthorised",
+    "error_code": 40000,
+    "data":{
+    }
+}
+```
+
+
 ## Code Examples
 
 === "python - http.client"
+
     ``` python
     # you an use any other module as well such as requests, urllib, etc.,
 
@@ -51,15 +106,15 @@ content-type | application/json
     'x-authorization-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg',
     'content-type': 'application/json'
     }
-    conn.request("GET", "/api/v1/funds/view?client_id=%3CClientId%3E&type=all", payload, headers)
+    conn.request("GET", "/api/v2/funds/view?client_id=%3CClientId%3E&type=all", payload, headers)
     res = conn.getresponse()
     data = res.read()
     print(data.decode("utf-8"))
-
     ```
 
 
-=== "JavaScript"
+=== "JavaScript-Fetch"
+
     ``` javascript
     // You can also use other methods such as `axios`,`jQuery`, `XHR`, etc..
     var myHeaders = new Headers();
@@ -73,19 +128,21 @@ content-type | application/json
     redirect: 'follow'
     };
 
-    fetch("https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all", requestOptions)
+    fetch("https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-    
+        
     ```
 
 === "C#"
+
     ``` csharp
+
     // You can also use other libraries such as RestSharp, etc..
 
     var client = new HttpClient();
-    var request = new HttpRequestMessage(HttpMethod.Get, "https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all");
+    var request = new HttpRequestMessage(HttpMethod.Get, "https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all");
     request.Headers.Add("x-device-type", "WEB");
     request.Headers.Add("x-authorization-token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg");
     request.Headers.Add("content-type", "application/json");
@@ -98,18 +155,20 @@ content-type | application/json
 
 
 
+
     ```
 
 === "cURL"
+
     ``` bash
-    curl --location 'https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all' \
+    curl --location 'https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all' \
     --header 'x-device-type: WEB' \
     --header 'x-authorization-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg' \
     --header 'content-type: application/json'
 
     ```
 
-=== "Dart"
+=== "Dart-http"
     ``` dart
 
     var headers = {
@@ -117,7 +176,7 @@ content-type | application/json
     'x-authorization-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg',
     'content-type': 'application/json'
     };
-    var request = http.Request('GET', Uri.parse('https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all'));
+    var request = http.Request('GET', Uri.parse('https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all'));
 
     request.headers.addAll(headers);
 
@@ -129,10 +188,12 @@ content-type | application/json
     else {
     print(response.reasonPhrase);
     }
+
         
     ```
 
 === "Go"
+
     ``` go
     package main
 
@@ -144,7 +205,7 @@ content-type | application/json
 
     func main() {
 
-    url := "https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all"
+    url := "https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all"
     method := "GET"
 
     client := &http.Client {
@@ -177,16 +238,18 @@ content-type | application/json
     ```
 
 === "HTTP"
+
     ``` http
-    GET /api/v1/funds/view?client_id=<ClientId>&type=all HTTP/1.1
+    GET /api/v2/funds/view?client_id=<ClientId>&type=all HTTP/1.1
     Host: pacetrader.pacefin.in
     x-device-type: WEB
     x-authorization-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg
     content-type: application/json
-        
+
     ```
 
-=== "Java"
+=== "Java-okhttp"
+
     ``` java
     // You can also use other libraries such as Unirest, etc..
 
@@ -195,7 +258,7 @@ content-type | application/json
     MediaType mediaType = MediaType.parse("application/json");
     RequestBody body = RequestBody.create(mediaType, "");
     Request request = new Request.Builder()
-    .url("https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all")
+    .url("https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all")
     .method("GET", body)
     .addHeader("x-device-type", "WEB")
     .addHeader("x-authorization-token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg")
@@ -207,13 +270,14 @@ content-type | application/json
     ```
 
 === "C - Libcurl"
+
     ``` c
     CURL *curl;
     CURLcode res;
     curl = curl_easy_init();
     if(curl) {
     curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "GET");
-    curl_easy_setopt(curl, CURLOPT_URL, "https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all");
+    curl_easy_setopt(curl, CURLOPT_URL, "https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all");
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
     curl_easy_setopt(curl, CURLOPT_DEFAULT_PROTOCOL, "https");
     struct curl_slist *headers = NULL;
@@ -226,9 +290,11 @@ content-type | application/json
     curl_easy_cleanup(curl);
 
 
+
     ```
 
 === "node.js - Native"
+
     ``` javascript
     // You can also use other libraries such as `axios`,`jQuery`, `request` `Unirest`, etc.. this example uses `node.js` native`
 
@@ -238,7 +304,7 @@ content-type | application/json
     var options = {
     'method': 'GET',
     'hostname': 'pacetrader.pacefin.in',
-    'path': '/api/v1/funds/view?client_id=%3CClientId%3E&type=all',
+    'path': '/api/v2/funds/view?client_id=%3CClientId%3E&type=all',
     'headers': {
         'x-device-type': 'WEB',
         'x-authorization-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg',
@@ -270,12 +336,13 @@ content-type | application/json
 
 
 === "Objective-C - NSURLSession"
+
     ``` objective-c
-    #import <Foundation/Foundation.h>
+   #import <Foundation/Foundation.h>
 
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all"]
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all"]
     cachePolicy:NSURLRequestUseProtocolCachePolicy
     timeoutInterval:10.0];
     NSDictionary *headers = @{
@@ -304,16 +371,18 @@ content-type | application/json
     }];
     [dataTask resume];
     dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+
     ```
 
 === "ocaml-Cohttp"
+
     ``` ocaml
     open Lwt
     open Cohttp
     open Cohttp_lwt_unix
 
     let reqBody = 
-    let uri = Uri.of_string "https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all" in
+    let uri = Uri.of_string "https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all" in
     let headers = Header.init ()
         |> fun h -> Header.add h "x-device-type" "WEB"
         |> fun h -> Header.add h "x-authorization-token" "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg"
@@ -330,6 +399,7 @@ content-type | application/json
 
 
 === "PHP - cURL"
+
     ``` php
     //you can also use other libraries such as `Guzzle`, `HTTP_Request2`, `pcel_http`, etc..
     <?php
@@ -337,7 +407,7 @@ content-type | application/json
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all',
+    CURLOPT_URL => 'https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -358,17 +428,17 @@ content-type | application/json
     echo $response;
 
 
-
     ```
 
 === "Powershell-RestMethod"
+
     ``` powershell
     $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
     $headers.Add("x-device-type", "WEB")
     $headers.Add("x-authorization-token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg")
     $headers.Add("content-type", "application/json")
 
-    $response = Invoke-RestMethod 'https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all' -Method 'GET' -Headers $headers
+    $response = Invoke-RestMethod 'https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all' -Method 'GET' -Headers $headers
     $response | ConvertTo-Json
 
     ```
@@ -379,14 +449,17 @@ content-type | application/json
     ``` r
     // You can also use other libraries such as `curl`, `resty`, etc..
 
-    library(RCurl)
+    library(httr)
+
     headers = c(
-    "x-device-type" = "WEB",
-    "x-authorization-token" = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg",
-    "content-type" = "application/json"
+    'x-device-type' = 'WEB',
+    'x-authorization-token' = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg',
+    'content-type' = 'application/json'
     )
-    res <- getURL("https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all", .opts=list(httpheader = headers, followlocation = TRUE))
-    cat(res)
+
+    res <- VERB("GET", url = "https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all", add_headers(headers))
+
+    cat(content(res, 'text'))
 
     ```
 
@@ -398,7 +471,7 @@ content-type | application/json
     require "json"
     require "net/http"
 
-    url = URI("https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all")
+    url = URI("https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all")
 
     https = Net::HTTP.new(url.host, url.port)
     https.use_ssl = true
@@ -411,23 +484,23 @@ content-type | application/json
     response = https.request(request)
     puts response.read_body
 
+
     ```
 
 === "Shell - httpie"
     ``` shell
     # You can also use other libraries such as `curl`, `wget`, etc..
-
-    http --follow --timeout 3600 GET 'https://pacetrader.pacefin.in/api/v1/funds/view?client_id=<ClientId>&type=all' \
+    http --follow --timeout 3600 GET 'https://pacetrader.pacefin.in/api/v2/funds/view?client_id=<ClientId>&type=all' \
     x-device-type:'WEB' \
     x-authorization-token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg' \
     content-type:'application/json'
-
     ```
 
 === "Swift-URLSession"
+
     ```swift
     
-    var request = URLRequest(url: URL(string: "https://pacetrader.pacefin.in/api/v1/funds/view?client_id=%3CClientId%3E&type=all")!,timeoutInterval: Double.infinity)
+    var request = URLRequest(url: URL(string: "https://pacetrader.pacefin.in/api/v2/funds/view?client_id=%3CClientId%3E&type=all")!,timeoutInterval: Double.infinity)
     request.addValue("WEB", forHTTPHeaderField: "x-device-type")
     request.addValue("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJibGFja2xpc3Rfa2V5IjoiQ0xJRU5UMTpURGYvZ1RKUUNFSytsWGJ1L21yenF3IiwiY2xpZW50X2lkIjoiQ0xJRU5UMSIsImNsaWVudF90b2tlbiI6InlKeDI0dFdmUUlsSnloUnVWbVVKeXciLCJkZXZpY2UiOiJ3ZWIiLCJleHAiOjE2NjQ0Mzk3ODE2NTZ9.LP70t5kXSBtO0iflzG2lo3lvs8wj9_HpHRjOPSHSBpg", forHTTPHeaderField: "x-authorization-token")
     request.addValue("application/json", forHTTPHeaderField: "content-type")

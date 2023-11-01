@@ -26,6 +26,66 @@ content-type | application/json
 }
 ```
 
+
+### Response
+```json
+ {
+     "data":{
+      "holdings": [
+        {
+        "branch_code": "",
+        "buy_avg": 240.2,
+        "buy_avg_mtm": 277.7500000000006,
+        "client_id": "DEMO1",
+        "exchange": "NSE",
+        "free_quantity": 55,
+        "instrument_details":{
+        "exchange": 1,
+        "instrument_name": "EQ",
+        "instrument_token": 3045,
+        "trading_symbol": "SBIN-EQ"
+        }
+        "isin": "INE062A01020",
+        "ltp": 245.25,
+        "pending_quantity": 0,
+        "pledge_quantity": 0,
+        "previous_close": 240.2,
+        "quantity": 55,
+        "symbol": "SBIN",
+        "t0_price": 0,
+        "t0_quantity": 0,
+        "t1_price": 0,
+        "t1_quantity": 0,
+        "t2_price": 0,
+        "t2_quantity": 0,
+        "today_pledge_quantity": 0,
+        "token": 3045,
+        "trading_symbol": "SBIN",
+        "transaction_type": "",
+        "used_quantity": 0
+        }]
+     }
+     "message": "",
+     "status": "success"
+ }
+```
+
+### Error Response
+```json
+  {
+     "data":{
+     }
+     "error_code": 44000,
+     "message": "`type` is invalid",
+     "status": "error"
+  }
+
+```
+
+____________________________________________________________________________________________________________________
+
+
+
 ### Code Examples
 
 === "python - http.client"

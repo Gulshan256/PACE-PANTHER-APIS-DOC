@@ -64,27 +64,28 @@ content-type | application/json
  }
 ```
 
-## Sucess Response
+## Response
 ```json
 {
-    "status": "success",
-    "message": "Order placed successfully",
-    "data": {
-        "order_id": "2000000000000000000",
-        "user_order_id": "10002"
+    "data":{
+        "data":{
+            "basket_id": "20210531-19",
+            "message": "basket Order Placed Successfully"
+        }
     }
-}
+    "message": "Order place successfully",
+    "status": "success"
+ }
 ```
 
-## Failed Response
+## Error Response
 ```json
 {
-    "status": "error",
-    "message": "Order not placed",
-    "data": {
-        "error": "Invalid order type"
-    }
-}
+   "data": {},
+   "error_code": 44000,
+   "message": "`product` is invalid",
+   "status": "error"
+ }
 ```
 
 ## Code Example

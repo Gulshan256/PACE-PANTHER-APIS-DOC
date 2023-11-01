@@ -33,6 +33,98 @@ string -->
 }
 ```
 
+# response
+```json
+{
+    "result":{
+        "board_lot_quantity": 1,
+        "change_in_oi": 0,
+        "exchange": 1,
+        "expiry": 0,
+        "higher_circuit_limit": 32.8,
+        "instrument_name": "EQ",
+        "instrument_token": 10666,
+        "isin": "INE160A01022",
+        "lower_circuit_limit": 26.9,
+        "multiplier": 1,
+        "open_interest": 0,
+        "option_type": "",
+        "precision": 2,
+        "series": "EQ",
+        "strike": 0,
+        "symbol": "PNB",
+        "tick_size": 0.05,
+        "trading_symbol": "PNB-EQ",
+        "underlying_token": 10666,
+        "raw_expiry": 0,
+        "freeze": 355,
+        "instrument_type": "0",
+        "issue_rate": 0,
+        "issue_start_date": "25-Apr-2002",
+        "list_date": "25-Apr-2002",
+        "max_order_size": 0,
+        "price_numerator": 0,
+        "price_denominator": 0,
+        "comments": "ANNUAL GENERAL MEETING",
+        "circuit_rating": "",
+        "company_name": "PUNJAB NATIONAL BANK",
+        "display_name": "PNB EQ",
+        "raw_tick_size": 5,
+        "is_index": false,
+        "tradable": true,
+        "max_single_qty": 0,
+        "expiry_string": "",
+        "local_update_time": "",
+        "market_type": "",
+        "price_units": "",
+        "trading_units": "",
+        "last_trading_date": "",
+        "tender_period_end_date": "",
+        "delivery_start_date": "",
+        "price_quotation": 0,
+        "general_denominator": "",
+        "tender_period_start_date": "",
+        "delivery_units": "",
+        "delivery_end_date": "",
+        "trading_unit_factor": 0,
+        "delivery_unit_factor": 0,
+        "book_closure_end_date": "3-Aug-2020",
+        "book_closure_start_date": "28-Jul-2020",
+        "no_delivery_date_end": "0",
+        "no_delivery_date_start": "0",
+        "re_admission_date": "0",
+        "record_date": "0",
+        "warning": "0",
+        "dpr": "26.9000 - 32.8000",
+        "trade_to_trade": false,
+        "surveillance_indicator": 0,
+        "partition_id": 0,
+        "product_id": 0,
+        "product_category": "",
+        "month_identifier": 0
+    }
+    "error":{
+        "code": 0,
+        "message": ""
+    }
+}
+```
+
+
+### Error Response
+```json 
+{
+    "error":{
+        "code": 404,
+        "message": "Resource Not Found"
+    }
+    "result": ""
+}
+```
+
+
+____________________________________________________________________________________________________________________
+
 ### Code Examples
 
 === "python - http.client"

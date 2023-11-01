@@ -25,6 +25,79 @@ content-type | application/json
     "key": "<KeyOfInstrument>"
 }
 ```
+# Response
+```json
+{
+    "error":{
+    "code": 0,
+    "message": ""}
+    "result": [
+    {
+        "token": "3045",
+        "exchange": "NSE",
+        "company": "STATE BANK OF INDIA",
+        "symbol": "SBIN",
+        "trading_symbol": "SBIN-EQ",
+        "display_name": "SBIN EQ",
+        "score": 0.210093,
+        "isin": "INE062A01020",
+        "close_price": "384.4",
+        "alternate":{
+        "token": "500112",
+        "exchange": "BSE",
+        "company": "STATE BANK OF INDIA",
+        "symbol": "SBIN",
+        "trading_symbol": "SBIN-A",
+        "display_name": "SBIN A",
+        "isin": "INE062A01020",
+        "close_price": "384.25"
+        }
+    }{
+        "token": "124300",
+        "exchange": "NFO",
+        "company": "SBIN",
+        "symbol": "SBIN21JUN415CE",
+        "trading_symbol": "SBIN21JUN415CE",
+        "display_name": "SBIN JUN 21 415 CE",
+        "score": 0.15969369376000042,
+        "close_price": "18.15",
+        "alternate":{
+        }
+    }{
+        "token": "124299",
+        "exchange": "NFO",
+        "company": "SBIN",
+        "symbol": "SBIN21JUN410PE",
+        "trading_symbol": "SBIN21JUN410PE",
+        "display_name": "SBIN JUN 21 410 PE",
+        "score": 0.1596936937600004,
+        "close_price": "39.25",
+        "alternate":{
+        }
+    }]
+}
+```
+
+
+### Error Response
+```json
+
+{
+    "error":{
+        "code": 0,
+        "message": ""
+    }
+    "result":{
+    }
+}
+
+```
+
+
+
+
+
+________________________________________________________________________________
 
 ### Code Examples
 
