@@ -91,6 +91,8 @@ theme:
   language: en
   font:
     text: Roboto
+    code: Roboto Mono
+    size: 14
   name: material
   # name: windmill
   # name: readthedocs
@@ -113,7 +115,7 @@ theme:
     
   features:
     - content.tabs.links
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.tabs.sticky
     - navigation.light
     - navigation.instant
