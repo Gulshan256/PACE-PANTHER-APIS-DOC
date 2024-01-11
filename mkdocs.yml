@@ -62,16 +62,37 @@ nav:
     - contract_details/search_scrip.md
     - contract_details/scrip_Info.md
   
-  - Option Chain: option_chain.md
-  - IPO: 
-    - ipo/get_all_ipo.md
-    - ipo/place_ipo_order.md
-    - ipo/fetch_ipo_order.md
-    - ipo/cancel_ipo_order.md
+  # - Option Chain: option_chain.md
+  # - IPO: 
+  #   - ipo/get_all_ipo.md
+  #   - ipo/place_ipo_order.md
+  #   - ipo/fetch_ipo_order.md
+  #   - ipo/cancel_ipo_order.md
   - Funds: 
     - Fetch Funds V1: funds/fetch-funds-v1.md
     - Fetch Funds V2: funds/fetch-funds-v2.md
+  
+  - 'websocket': websocket/websocket.md
+  # - 'Websocket':
+    # - 'Introduction': websocket/introduction.md
+    # - 'Connection': websocket/connection.md
+    # - 'Authentication': websocket/authentication.md
+    # - 'Subscribe': websocket/subscribe.md
+    # - 'Unsubscribe': websocket/unsubscribe.md
+    # - 'Ping': websocket/ping.md
+    # - 'Pong': websocket/pong.md
+    # - 'Heartbeat': websocket/heartbeat.md
+    # - 'Disconnect': websocket/disconnect.md
+    # - 'Reconnect': websocket/reconnect.md
+    # - 'Error': websocket/error.md
+    # - 'Message': websocket/message.md
+  
+  # - Market Data : 
+  #   -
 
+
+
+  - Strategy : strategy/strategy.md    
 
 
 
