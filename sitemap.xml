@@ -2,232 +2,242 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/login/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/option_chain/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/profile/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/contract_details/scrip_Info/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/contract_details/search_scrip/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/funds/fetch-funds-v1/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/funds/fetch-funds-v2/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ipo/cancel_ipo_order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ipo/fetch_ipo_order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ipo/get_all_ipo/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ipo/place_ipo_order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/amo_order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/order_types/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/orders/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/regular_order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/add-basket-instruments/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/create-basket/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/delete-basket-instruments/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/delete-basket/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/edit-basket-instruments/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/excuting-basket/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/fetch-basket/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/basket/rename-basket/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/bo-cancel/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/bo-modify/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/bo-order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/co-cancel/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/co-modify/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/co-order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/spread-cancel/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/spread-modify/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/conditional/spread-order/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/gtt/cancel-gtt/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/gtt/create-gtt/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/gtt/fetch-gtt/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/gtt/modify-gtt/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/orderbook/completed-orders/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/orderbook/order-history/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/orderbook/panding-orders/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/orders/orderbook/trade-book/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/portfolio/convert_positions/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/portfolio/fetch_demat_holdings/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/portfolio/fetch_positions_daywise/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/portfolio/fetch_positions_netwise/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/portfolio/portfolio/</loc>
-         <lastmod>2023-11-29</lastmod>
+         <lastmod>2024-01-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/strategy/strategy/</loc>
+         <lastmod>2024-01-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/websocket/websocket/</loc>
+         <lastmod>2024-01-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
