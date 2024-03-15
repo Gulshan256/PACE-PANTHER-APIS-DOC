@@ -1,5 +1,8 @@
 site_name: Pacefin
-site_url: https://example.com/
+site_description: 'Pacefin API Documentation'
+site_url: 'https://pacefin.github.io/pacefin-api-docs/'
+site_author: 'Pacefin'
+
 
 nav:
   - Introduction: index.md
@@ -72,10 +75,12 @@ nav:
     - Fetch Funds V1: funds/fetch-funds-v1.md
     - Fetch Funds V2: funds/fetch-funds-v2.md
   
-  - 'websocket': websocket/websocket.md
-  # - 'Websocket':
-    # - 'Introduction': websocket/introduction.md
-    # - 'Connection': websocket/connection.md
+  # - 'websocket': websocket/websocket.md
+  - 'Websocket':
+    - 'Introduction': websocket/introduction.md
+    - 'Compact-Marketdata': websocket/compact-marketdata.md
+    - 'Detailed-Marketdata': websocket/detailed-marketdata.md
+    - 'Spread-Marketdata': websocket/spread-marketdata.md
     # - 'Authentication': websocket/authentication.md
     # - 'Subscribe': websocket/subscribe.md
     # - 'Unsubscribe': websocket/unsubscribe.md
@@ -109,11 +114,14 @@ markdown_extensions:
 
 
 theme:
+  
   language: en
   font:
     text: Roboto
     code: Roboto Mono
     size: 14
+  logo: https://dev-trade.pocketful.in/trading/static/media/logo.93b4c818773850c5fd0945589b2e85b2.svg
+  favicon: https://dev-trade.pocketful.in/trading/favicon.ico
   name: material
   # name: windmill
   # name: readthedocs
