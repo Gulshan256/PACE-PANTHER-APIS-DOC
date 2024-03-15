@@ -12,13 +12,13 @@
         <meta name="author" content="Pacefin">
       
       
-        <link rel="canonical" href="https://pacefin.github.io/pacefin-api-docs/portfolio/portfolio/">
+        <link rel="canonical" href="https://pacefin.github.io/pacefin-api-docs/websocket/introduction/">
       
       
-        <link rel="prev" href="../../orders/gtt/modify-gtt/">
+        <link rel="prev" href="../../funds/fetch-funds-v2/">
       
       
-        <link rel="next" href="../fetch_positions_daywise/">
+        <link rel="next" href="../compact-marketdata/">
       
       
       <link rel="icon" href="https://dev-trade.pocketful.in/trading/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Intro Portfolio - Pacefin</title>
+        <title>Introduction - Pacefin</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#portfolio" class="md-skip">
+        <a href="#websocket" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro Portfolio
+              Introduction
             
           </span>
         </div>
@@ -1177,20 +1177,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1204,7 +1202,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Portfolio
@@ -1215,18 +1213,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../portfolio/portfolio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1235,7 +1224,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1247,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch_positions_daywise/" class="md-nav__link">
+      <a href="../../portfolio/fetch_positions_daywise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1267,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch_positions_netwise/" class="md-nav__link">
+      <a href="../../portfolio/fetch_positions_netwise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch_demat_holdings/" class="md-nav__link">
+      <a href="../../portfolio/fetch_demat_holdings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convert_positions/" class="md-nav__link">
+      <a href="../../portfolio/convert_positions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,18 +1505,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1542,7 +1532,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Websocket
@@ -1553,9 +1543,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../websocket/introduction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1564,6 +1574,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-api" class="md-nav__link">
+    WebSocket API
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-url" class="md-nav__link">
+    WebSocket URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1575,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../websocket/compact-marketdata/" class="md-nav__link">
+      <a href="../compact-marketdata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1595,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../websocket/detailed-marketdata/" class="md-nav__link">
+      <a href="../detailed-marketdata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../websocket/spread-marketdata/" class="md-nav__link">
+      <a href="../spread-marketdata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1675,6 +1739,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-api" class="md-nav__link">
+    WebSocket API
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket-url" class="md-nav__link">
+    WebSocket URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1688,49 +1794,19 @@
                   
 
 
-<h1 id="portfolio">Portfolio</h1>
-<p><strong>Portfolio: Building Your Financial Future</strong></p>
-<p>A portfolio is your key to unlocking the world of investing and financial growth. It's like a treasure chest filled with various investments that can help you achieve your financial goals. In this section, we'll explore what a portfolio is and why it matters.</p>
-<p><strong>What is a Portfolio?</strong></p>
-<p>A portfolio is a smart way to organize your investments. Just like you might have a collection of toys or a selection of your favorite things, a financial portfolio is a collection of different assets, like stocks, bonds, and more. These assets can work together to make your money grow over time.</p>
-<p><strong>Why Does a Portfolio Matter?</strong></p>
-<p>Creating and managing a portfolio is essential for a few important reasons:</p>
-<ol>
-<li>
-<p><strong>Diversification</strong>: A well-structured portfolio can help you spread the risk. It's like not putting all your eggs in one basket. By having different types of investments, you can reduce the impact of a single investment going up or down.</p>
-</li>
-<li>
-<p><strong>Balancing Risk and Reward</strong>: Some investments are more like thrilling adventures, offering the potential for high returns but also higher risk. Others are like steady companions, offering stability and security. Your portfolio lets you find the right balance between these different types of investments to match your financial goals and risk tolerance.</p>
-</li>
-<li>
-<p><strong>Meeting Your Goals</strong>: Your portfolio should align with your financial goals. Whether you're saving for a big purchase, your child's education, or your retirement, your portfolio is a tool to help you get there.</p>
-</li>
-<li>
-<p><strong>Regular Monitoring</strong>: Just like you check your favorite things from time to time, it's important to keep an eye on your portfolio. You may need to adjust it as your goals change or as the investment market evolves.</p>
-</li>
-</ol>
-<p><strong>In Summary</strong></p>
-<p>Your financial portfolio is your pathway to building wealth and achieving your dreams. It's a diverse collection of investments that work together to help your money grow over time. By understanding the principles of diversification, risk, and aligning your portfolio with your goals, you'll be better equipped to navigate the exciting world of investing.</p>
-<hr />
-<p>The Pocketfull Portfolio API is a RESTful API that provides access to Pocketfull's portfolio management platform. The API can be used to create, manage, and track portfolios of assets, including stocks, bonds, mutual funds, and ETFs. The API also provides access to historical and real-time market data, as well as news and analysis.</p>
-<p>The Pocketfull Portfolio API is designed to be easy to use and integrate with a variety of programming languages. The API provides a comprehensive set of features, including:</p>
+<h1 id="websocket">WebSocket</h1>
+<h2 id="overview">Overview</h2>
+<p>WebSocket is a protocol that provides full-duplex communication channels over a single TCP connection. It is designed to be implemented in web browsers and web servers, but it can be used by any client or server application. The WebSocket protocol makes possible more interaction between a browser and a web site, facilitating live content and the creation of real-time game.</p>
+<h2 id="websocket-api">WebSocket API</h2>
+<h3 id="websocket-url">WebSocket URL</h3>
+<p>The WebSocket URL is the URL used to establish a WebSocket connection with the server. The WebSocket URL has the following format:
+<div class="highlight"><pre><span></span><code>wss://pacetrader.pacefin.in/ws/v1/feeds/?login_id=&lt;client_id&gt;&amp;access_token=&lt;token&gt;
+</code></pre></div></p>
+<h3 id="features">Features</h3>
 <ul>
-<li><strong>Portfolio management:</strong> Create, manage, and track portfolios of assets.</li>
-<li><strong>News and analysis:</strong> Get the latest news and analysis on the markets and individual assets.</li>
+<li><strong>Real-time data</strong> - The WebSocket protocol enables real-time data transfer. The server can send data to the client whenever it wants, without the client requesting it, and vice versa.</li>
+<li><strong>Low latency</strong> - The WebSocket protocol reduces latency compared to other protocols such as HTTP, which needs to poll the server for changes.</li>
 </ul>
-<p>The Pocketfull Portfolio API is a valuable tool for financial professionals and investors who want to create and manage their own portfolios or develop custom investment applications.</p>
-<p>Here are some examples of how the Pocketfull Portfolio API can be used:</p>
-<ul>
-<li>A financial advisor could use the API to create and manage portfolios for their clients.</li>
-<li>A stockbroker could use the API to provide their clients with real-time market data and news.</li>
-<li>A robo-advisor could use the API to automate the investment process for their clients.</li>
-<li>A hedge fund could use the API to develop custom trading strategies.</li>
-<li>A research firm could use the API to backtest investment strategies and analyze market data.</li>
-<li>An individual investor could use the API to create and manage their own portfolio.</li>
-<li>A financial technology company could use the API to develop new investment products and services.</li>
-</ul>
-<p>The Pocketfull Portfolio API is a powerful tool that can be used in a variety of ways. If you are looking for a comprehensive and easy-to-use API for portfolio management, the Pocketfull Portfolio API is a great choice.</p>
-<hr />
 
 
 
